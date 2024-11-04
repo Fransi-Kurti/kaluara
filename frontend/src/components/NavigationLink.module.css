@@ -1,0 +1,37 @@
+.navigationLink{
+    list-style-type: none;
+    width: 200px;
+    margin: 0;
+    padding: 0;
+    /* text-align: left; */
+}
+.navigationLink a{
+    text-decoration: none;
+    font-size: 1rem;
+    color: #2d2d2d;
+}
+
+.navigationLink a:hover{
+    color: #ccdb30;
+}
+
+
+
+.navigationLinkSecondRow{
+    list-style-type: none;
+    width: 200px;
+    margin: 0;
+    padding: 0;
+    /* text-align: left; */
+}
+
+.navigationLinkSecondRow a{
+    text-decoration: none;
+    font-size: 1rem;
+    color: white;
+}
+
+.navigationLinkSecondRow a:hover{
+    color: #ccdb30;
+}
+

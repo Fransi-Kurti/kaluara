@@ -1,0 +1,7 @@
+.sun {
+  width: 15px; /* Diameter of the circle */
+  height: 15px;
+  background-color: #ccdb30; /* Color of the circle */
+  border-radius: 50%; /* Makes it a perfect circle */
+  cursor: pointer;
+}
