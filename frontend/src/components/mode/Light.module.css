@@ -1,6 +1,6 @@
 .sun {
-  width: 15px; /* Diameter of the circle */
-  height: 15px;
+  width: 16px; /* Diameter of the circle */
+  height: 16px;
   background-color: #ccdb30; /* Color of the circle */
   border-radius: 50%; /* Makes it a perfect circle */
   cursor: pointer;

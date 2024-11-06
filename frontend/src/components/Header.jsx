@@ -15,8 +15,9 @@ export default function Header() {
       <div >
         <KaluaraLogo />
       </div>
-      <div>
-      <i className="fas fa-shopping-cart"></i>
+      <div className={classes.cartIcon}>
+        <div className={classes.iconCircle}></div>
+        <i className="fas fa-shopping-cart" ></i>
 
       </div>
     </header>

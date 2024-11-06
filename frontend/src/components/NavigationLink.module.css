@@ -1,37 +1,44 @@
 .navigationLink{
     list-style-type: none;
-    width: 200px;
+    width: 120px;
     margin: 0;
     padding: 0;
-    /* text-align: left; */
+    text-align: center;
+    /* border: 3px solid peru; */
 }
 .navigationLink a{
     text-decoration: none;
     font-size: 1rem;
-    color: #2d2d2d;
+    color: #232323;
 }
 
 .navigationLink a:hover{
     color: #ccdb30;
+    font-style: italic;
+
 }
 
 
 
 .navigationLinkSecondRow{
     list-style-type: none;
-    width: 200px;
+    width: 120px;
     margin: 0;
     padding: 0;
-    /* text-align: left; */
+    /* border: 3px solid peru; */
+    text-align: center;
 }
 
 .navigationLinkSecondRow a{
     text-decoration: none;
     font-size: 1rem;
-    color: white;
+    color: #f2f2f2;
 }
 
 .navigationLinkSecondRow a:hover{
     color: #ccdb30;
+    font-style: italic;
+
+    
 }
 

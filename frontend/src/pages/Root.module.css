@@ -1,0 +1,16 @@
+.headerContainer {
+    margin: 0;
+    padding: 0;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+}
+
+.outlet {
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+    height: auto;
+    /* border: 1px solid red; */
+}

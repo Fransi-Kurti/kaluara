@@ -1,4 +1,18 @@
-.logo{
+.logo {
     margin: 0;
-    width: 80px;
+    width: 80px; /* Default width for larger screens */
+    height: auto; /* Maintains aspect ratio */
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+    .logo {
+        width: 60px; /* Slightly smaller on tablet screens */
+    }
+}
+
+@media (max-width: 480px) {
+    .logo {
+        width: 50px; /* Smaller for mobile screens */
+    }
 }
