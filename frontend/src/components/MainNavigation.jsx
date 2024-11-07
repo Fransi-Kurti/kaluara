@@ -17,7 +17,7 @@ export default function MainNavigation() {
           <NavigationLink secondRow label="BLOGS" />
           <NavigationLink secondRow label="MIXES" />
           <NavigationLink secondRow label="INTERVIEWS" />
-          <NavigationLink secondRow label="SUGGESTIONS" />
+          <NavigationLink secondRow label="ABOUT" />
         </ul>
       </div>
     </div>
