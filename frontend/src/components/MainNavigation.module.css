@@ -9,8 +9,6 @@
   border-top: 3px solid black;
   border-bottom: 3px solid #f2f2f2;
   box-shadow: 0 4px 4px rgba(165, 161, 161, 0.1);
-  position: sticky;
-  top: 0;
   background-color: white;
   z-index: 500;
 }

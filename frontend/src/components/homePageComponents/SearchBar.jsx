@@ -9,6 +9,7 @@ export default function SearchBar() {
         type="text" 
         placeholder="Search..." 
         className={classes.searchInput}
+        name='searchbar'
       />
       <button className={classes.searchButton}>
         🔍
