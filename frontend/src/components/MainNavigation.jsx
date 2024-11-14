@@ -6,7 +6,7 @@ export default function MainNavigation() {
     <div className={classes.mainNavigation}>
       <div className={classes.navigationFirstRow}>
         <ul>
-          <NavigationLink label="BOOKS" />
+          <NavigationLink path='/books' label="BOOKS" />
           <NavigationLink label="MUSIC" />
           <NavigationLink label="MAGAZINES" />
           <NavigationLink label="MERCH" />

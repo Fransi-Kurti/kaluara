@@ -8,6 +8,7 @@ import Quote from "../components/homePageComponents/Quote";
 import SearchBar from "../components/homePageComponents/SearchBar";
 import SubscribeContainer from "../components/homePageComponents/SubscribeContainer";
 import classes from "./HomePage.module.css";
+import Footer from '../components/Footer'
 
 export default function HomePage() {
   return (
@@ -27,6 +28,7 @@ export default function HomePage() {
         <AskAQuestion />
         <AdContainer />
       </div>
+      <Footer />
     </div>
   );
 }
