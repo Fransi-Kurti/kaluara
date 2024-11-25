@@ -1,20 +1,38 @@
+import { useState } from "react";
 import classes from "./Sidebar.module.css";
-import { booksFilterNames, languageFilter } from "../assets/booksFilter";
 import Filters from "./Filters";
 
-export default function Sidebar() {
+export default function Sidebar({ filterBooks, filterLanguage }) {
+  const [isSidebarVisible, setSidebarVisible] = useState(false);
+
+  const toggleSidebar = () => {
+    setSidebarVisible((prev) => !prev);
+  };
+
   return (
-    <div className={classes.sidebar}>
-      <div className={classes.firstSection}>
-        <ul>
-          <Filters filterType={booksFilterNames} />
-        </ul>
+    <>
+      <button className={classes.hamburger} onClick={toggleSidebar}>
+        ☰
+      </button>
+
+      <div
+        className={`${classes.sidebar} ${
+          isSidebarVisible ? classes.visible : ""
+        }`}
+      >
+        <div className={classes.firstSection}>
+          <ul>
+            <Filters filterType={filterBooks} />
+          </ul>
+        </div>
+        <div className={classes.secondSection}>
+          <ul>
+            <Filters filterType={filterLanguage} />
+          </ul>
+        </div>
       </div>
-      <div className={classes.secondSection}>
-        <ul>
-          <Filters filterType={languageFilter} />
-        </ul>
-      </div>
-    </div>
+
+      {isSidebarVisible && <div className={classes.overlay} onClick={toggleSidebar}></div>}
+    </>
   );
 }

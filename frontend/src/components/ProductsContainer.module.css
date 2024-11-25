@@ -1,12 +1,12 @@
 .productsContainer {
+    margin: 0;
+    padding: 0;
     position: relative;
     width: 100%;
     height: 100vh;
     display: flex;
     box-sizing: border-box;
     background-color: #f2f2f2;
+    overflow: hidden;
 }
 
-.productsContainer::before, .productsContainer::after {
-    box-sizing: border-box;
-}
