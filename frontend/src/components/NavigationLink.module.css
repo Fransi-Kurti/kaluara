@@ -1,44 +1,40 @@
-.navigationLink{
-    list-style-type: none;
-    width: 120px;
-    margin: 0;
-    padding: 0;
-    text-align: center;
-    /* border: 3px solid peru; */
+.navigationLink {
+  list-style-type: none;
+  width: 120px;
+  margin: 0;
+  padding: 0;
+  text-align: center;
+  /* border: 3px solid peru; */
 }
-.navigationLink a{
-    text-decoration: none;
-    font-size: 1rem;
-    color: #232323;
-}
-
-.navigationLink a:hover{
-    color: #ccdb30;
-    font-style: italic;
-
+.navigationLink a {
+  text-decoration: none;
+  font-size: 1rem;
+  color: #232323;
 }
 
-
-
-.navigationLinkSecondRow{
-    list-style-type: none;
-    width: 120px;
-    margin: 0;
-    padding: 0;
-    /* border: 3px solid peru; */
-    text-align: center;
+.navigationLink a:hover,
+.navigationLink a.active {
+  color: #ccdb30;
+  font-style: italic;
 }
 
-.navigationLinkSecondRow a{
-    text-decoration: none;
-    font-size: 1rem;
-    color: #f2f2f2;
+.navigationLinkSecondRow {
+  list-style-type: none;
+  width: 120px;
+  margin: 0;
+  padding: 0;
+  /* border: 3px solid peru; */
+  text-align: center;
 }
 
-.navigationLinkSecondRow a:hover{
-    color: #ccdb30;
-    font-style: italic;
-
-    
+.navigationLinkSecondRow a {
+  text-decoration: none;
+  font-size: 1rem;
+  color: #f2f2f2;
 }
 
+.navigationLinkSecondRow a:hover,
+.navigationLinkSecondRow a.active {
+  color: #ccdb30;
+  font-style: italic;
+}

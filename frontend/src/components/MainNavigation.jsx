@@ -1,23 +1,23 @@
 import NavigationLink from "./NavigationLink";
-import classes from './MainNavigation.module.css'
+import classes from "./MainNavigation.module.css";
 
 export default function MainNavigation() {
   return (
     <div className={classes.mainNavigation}>
       <div className={classes.navigationFirstRow}>
         <ul>
-          <NavigationLink path='/books' label="BOOKS" />
-          <NavigationLink label="MUSIC" />
-          <NavigationLink label="MAGAZINES" />
-          <NavigationLink label="MERCH" />
+          <NavigationLink path="/books" label="BOOKS" />
+          <NavigationLink path="/music" label="MUSIC" />
+          <NavigationLink path="/magazines" label="MAGAZINES" />
+          <NavigationLink path="/merch" label="MERCH" />
         </ul>
       </div>
       <div className={classes.navigationSecondRow}>
         <ul>
-          <NavigationLink secondRow label="BLOGS" />
-          <NavigationLink secondRow label="MIXES" />
-          <NavigationLink secondRow label="INTERVIEWS" />
-          <NavigationLink secondRow label="ABOUT" />
+          <NavigationLink path="/blogs" secondRow label="BLOGS" />
+          <NavigationLink path="/mixes" secondRow label="MIXES" />
+          <NavigationLink path="/interviews" secondRow label="INTERVIEWS" />
+          <NavigationLink path="/about" secondRow label="ABOUT" />
         </ul>
       </div>
     </div>
