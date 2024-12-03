@@ -1,5 +1,5 @@
 import { Link } from "react-router-dom";
-import classes from './ProductItem.module.css';
+import classes from "./ProductItem.module.css";
 
 export default function ProductItem({ item }) {
   return (
@@ -10,9 +10,15 @@ export default function ProductItem({ item }) {
           alt={item.title}
           className={classes.productImage}
         />
-        <div className={classes.productTitle}>{item.title}</div> {/* Hover Title */}
+        <div className={classes.productTitle}>
+          <div>
+            <p>{item.title}</p>
+            <p>-{item.author}</p>
+          </div>
+          <p>ClICK FOR MORE</p>
+        </div>{" "}
+        {/* Hover Title */}
       </Link>
     </li>
   );
 }
-
