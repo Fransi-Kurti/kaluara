@@ -1,75 +1,97 @@
 .carouselContainer {
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    width: 100%; 
-    max-width: 1400px; 
-    margin: 0 auto;
-    position: relative;
-    padding: 10px;
-    /* border: 3px solid red; */
-  }
-  
-  .goBack,
-  .goForward {
-    cursor: pointer;
-    display: flex;
-    align-items: center;
-    padding: 0 20px;
-  }
-  
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  position: relative;
+  max-width: 1200px;
+  margin: 0 auto;
+  overflow: hidden; /* Ensure only the visible part of the carousel is shown */
+}
+
+.carouselTrack {
+  display: flex;
+  transition: transform 0.5s ease-in-out; /* Smooth transition for sliding */
+  width: 100%; /* Ensure the container is the full width */
+}
+
+.carouselImage {
+  min-width: 100%; /* Each image takes up the full width of the container */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.carouselImage img {
+  width: 100%;
+  height: auto;
+}
+
+.goBack,
+.goForward {
+  cursor: pointer;
+  z-index: 2;
+  padding: 10px;
+  transition: background-color 0.3s ease, transform 0.3s ease, opacity 0.3s ease;
+}
+
+.goBack:hover,
+.goForward:hover {
+  background-color: rgba(29, 29, 26, 0.1);/* Adds transparency to the background */
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Adds a shadow for depth */
+  opacity: 0.9; /* Reduces overall opacity for a subtle fade effect */
+}
+
+
+.goBack img,
+.goForward img {
+  width: 40px;
+  height: 40px;
+}
+
+.indicators {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-top: 10px; /* Adjust for spacing */
+}
+
+.indicatorButtons {
+  background: none;
+  border: none;
+  cursor: pointer;
+  padding: 0;
+  margin: 0 5px; /* Adjust spacing between indicators */
+}
+
+.indicatorSymbol {
+  display: inline-block;
+  width: 12px; /* Adjust for slightly larger size */
+  height: 12px;
+  background-color: #232323; /* Default inactive color */
+  transition: transform 0.3s ease, background-color 0.3s ease, box-shadow 0.3s ease;
+}
+
+.indicatorSymbolActive {
+  background-color: #ccdb30; /* Active color */
+  transform: scale(1.1); /* Larger size for active indicator */
+  box-shadow: 0 0 5px rgba(204, 219, 48, 0.8); /* Glowing effect */
+  width: 14px; /* Explicit size override for active state */
+  height: 14px; /* Ensure it doesn't shrink */
+  border: 1px solid #f2f2f2;
+}
+
+.indicatorButtons:hover .indicatorSymbol {
+  background-color: rgba(204, 219, 48, 0.7); /* Subtle hover effect */
+  transform: scale(1.3); /* Slightly larger on hover */
+}
+
+
+
+@media (max-width: 768px) {
   .goBack img,
   .goForward img {
-    width: 40px; 
-    height: 40px;
+    width: 30px;
+    height: 30px;
   }
-  
-  .carouselImageContainer {
-    max-width: 1109px; 
-    max-height: 701px; 
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    overflow: hidden;
-    z-index: -1;
-  }
-  
-  .carouselImageContainer img {
-    width: 100%;
-    height: 100%;
-    object-fit: cover; 
-    border-radius: 8px; 
-  }
-  
-
-  
-  @media (max-width: 768px) {
-    .carouselContainer {
-      width: 100%;
-      padding: 5px;
-    }
-  
-    .carouselImageContainer {
-      width: 100%;
-      max-width: 100%; 
-      height: auto; 
-    }
-  
-    .goBack img,
-    .goForward img {
-      width: 30px; 
-      height: 30px;
-    }
-  }
-  
-  @media (max-width: 480px) {
-    .carouselContainer {
-      padding: 5px;
-    }
-  
-    .goBack,
-    .goForward {
-      padding: 0 10px;
-    }
-  }
-  
+}

@@ -1,10 +1,10 @@
 import { Link } from "react-router-dom";
 import classes from "./ProductItem.module.css";
 
-export default function ProductItem({ item }) {
+export default function ProductItem({ item, product }) {
   return (
     <li className={classes.productItem}>
-      <Link to={`/product/${item.id}`} className={classes.productLink}>
+      <Link to={`/${product}/${item.id}`} className={classes.productLink}>
         <img
           src={item.image}
           alt={item.title}
@@ -16,8 +16,8 @@ export default function ProductItem({ item }) {
             <p>-{item.author}</p>
           </div>
           <p>ClICK FOR MORE</p>
-        </div>{" "}
-        {/* Hover Title */}
+        </div>
+        
       </Link>
     </li>
   );

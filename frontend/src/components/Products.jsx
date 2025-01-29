@@ -1,16 +1,16 @@
-import { books } from "../assets/books";
+
 
 import classes from "./Products.module.css";
 import ProductItem from "./ProductItem";
 
-export default function Products() {
+export default function Products({productType, productPath}) {
   return (
     <div className={classes.productWrapper}> 
 
   
     <ul className={classes.productContainer}>
-      {books.map((book) => (
-       <ProductItem key={book.id} item={book}/>
+      {productType.map((type) => (
+       <ProductItem key={type.id} product={productPath} item={type}/>
       ))}
     </ul>
     </div>

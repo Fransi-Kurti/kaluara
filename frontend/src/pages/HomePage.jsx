@@ -2,7 +2,7 @@ import AdContainer from "../components/homePageComponents/AdContainer";
 import AskAQuestion from "../components/homePageComponents/AskAQuestion";
 import Carousel from "../components/homePageComponents/Carousel";
 import GenericContainer from "../components/homePageComponents/GenericContainer";
-import Line from "../components/homePageComponents/Line";
+// import Line from "../components/homePageComponents/Line";
 import NewArrivals from "../components/homePageComponents/NewArrivals";
 import Quote from "../components/homePageComponents/Quote";
 import SearchBar from "../components/homePageComponents/SearchBar";
@@ -14,7 +14,7 @@ export default function HomePage() {
   return (
     <div className={classes.mainHomePageContainer}>
       <NewArrivals />
-      <Line />
+      {/* <Line /> */}
       <Carousel />
       <div className={classes.container}>
         <GenericContainer>
