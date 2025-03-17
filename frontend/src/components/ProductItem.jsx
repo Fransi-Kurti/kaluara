@@ -6,7 +6,7 @@ export default function ProductItem({ item, product }) {
     <li className={classes.productItem}>
       <Link to={`/${product}/${item.id}`} className={classes.productLink}>
         <img
-          src={item.image}
+          src={`http://localhost:3000/${item.image}`}
           alt={item.title}
           className={classes.productImage}
         />

@@ -1,11 +1,42 @@
+import { useEffect, useState } from "react";
 import { useParams } from "react-router-dom";
+import classes from "./BookDetailPage.module.css";
 
 export default function BookDetailPage() {
-  const params = useParams();
+  const { bookId } = useParams();
+  const [book, setBook] = useState(null);
+
+  useEffect(() => {
+    async function fetchBook() {
+      try {
+        const response = await fetch(`http://localhost:3000/api/books/${bookId}`);
+        if (!response.ok) throw new Error("Failed to fetch book details");
+        const data = await response.json();
+        setBook(data);
+      } catch (error) {
+        console.error(error);
+      }
+    }
+
+    fetchBook();
+  }, [bookId]);
+
+  if (!book) return <p>Loading...</p>;
+
   return (
-    <main>
-      <h1>Book Detail Page</h1>
-      <p>{params.bookId}</p>
+    <main className={classes.container}>
+      <div className={classes.bookDetail}>
+        <img src={book.image} alt={book.title} className={classes.image} />
+        <div className={classes.info}>
+          <h1 className={classes.title}>{book.title}</h1>
+          <p className={classes.author}><strong>{book.author}</strong></p>
+          <p className={classes.description}>{book.description}</p>
+          <p className={classes.price}>{book.price}€</p>
+          <button className={classes.addToCart}>ADD TO CART</button>
+        </div>
+      </div>
+      <h2>OTHER ITEMS YOU MIGHT LIKE:</h2>
+      {/* Similar books section can be added here */}
     </main>
   );
 }
