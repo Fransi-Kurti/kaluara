@@ -5,6 +5,7 @@ import HomePage from "./pages/HomePage";
 import BooksPage from "./pages/BooksPage";
 import ErrorPage from "./pages/ErrorPage";
 import BookDetailPage from "./pages/BookDetailPage";
+import { CartContextProvider } from "./store/CartContext";
 
 
 function App() {
@@ -31,9 +32,9 @@ function App() {
     },
   ]);
   return (
-    <>
+    <CartContextProvider>
       <RouterProvider router={router} />
-    </>
+    </CartContextProvider>
   );
 }
 

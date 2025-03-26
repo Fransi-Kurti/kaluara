@@ -1,10 +1,16 @@
 import { useEffect, useState } from "react";
 import { useParams } from "react-router-dom";
 import classes from "./BookDetailPage.module.css";
+import { useContext } from "react";
+import CartContext from "../store/CartContext";
 
 export default function BookDetailPage() {
   const { bookId } = useParams();
   const [book, setBook] = useState(null);
+
+  const cartCtx = useContext(CartContext)
+
+
 
   useEffect(() => {
     async function fetchBook() {
@@ -22,6 +28,10 @@ export default function BookDetailPage() {
 
     fetchBook();
   }, [bookId]);
+
+  function handleAddProductToCart(){
+    cartCtx.addItem(book)
+  }
 
   if (!book) return <p>Loading...</p>;
 
@@ -46,7 +56,7 @@ export default function BookDetailPage() {
         <div className={classes.priceContainer}>
 
         <p className={classes.price}>{book.price}€</p>
-        <button className={classes.addToCart}>ADD TO CART</button>
+        <button onClick={handleAddProductToCart} className={classes.addToCart}>ADD TO CART</button>
         </div>
       </div>
     </main>
