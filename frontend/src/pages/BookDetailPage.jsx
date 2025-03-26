@@ -9,7 +9,9 @@ export default function BookDetailPage() {
   useEffect(() => {
     async function fetchBook() {
       try {
-        const response = await fetch(`http://localhost:3000/api/books/${bookId}`);
+        const response = await fetch(
+          `http://localhost:3000/api/books/${bookId}`
+        );
         if (!response.ok) throw new Error("Failed to fetch book details");
         const data = await response.json();
         setBook(data);
@@ -25,18 +27,28 @@ export default function BookDetailPage() {
 
   return (
     <main className={classes.container}>
-      <div className={classes.bookDetail}>
-        <img src={book.image} alt={book.title} className={classes.image} />
-        <div className={classes.info}>
-          <h1 className={classes.title}>{book.title}</h1>
-          <p className={classes.author}><strong>{book.author}</strong></p>
-          <p className={classes.description}>{book.description}</p>
-          <p className={classes.price}>{book.price}€</p>
-          <button className={classes.addToCart}>ADD TO CART</button>
+      <div className={classes.imageContainer}>
+        <img
+          src={`http://localhost:3000/${book.image}`}
+          alt={book.title}
+          className={classes.image}
+        />
+      </div>
+      <div className={classes.infoContainer}>
+        <div className={classes.descriptionContainer}>
+
+        <h1 className={classes.title}>{book.title}</h1>
+        <p className={classes.author}>
+          <strong>{book.author}</strong>
+        </p>
+        <p className={classes.description}>{book.description}</p>
+        </div>
+        <div className={classes.priceContainer}>
+
+        <p className={classes.price}>{book.price}€</p>
+        <button className={classes.addToCart}>ADD TO CART</button>
         </div>
       </div>
-      <h2>OTHER ITEMS YOU MIGHT LIKE:</h2>
-      {/* Similar books section can be added here */}
     </main>
   );
 }
