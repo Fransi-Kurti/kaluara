@@ -11,7 +11,7 @@
   margin-bottom: 20px;
 }
 
-.container {
+/* .container {
   margin: 0 auto;
   display: flex;
   justify-content: center;
@@ -33,7 +33,7 @@
   max-height: 763.8px;
   box-sizing: border-box;
   margin-bottom: 60px;
-  /* border: 3px solid saddlebrown; */
+
 }
 
 @media (max-width: 780px) {
@@ -54,4 +54,4 @@
   .secondContainer {
     justify-content: space-between;
   }
-}
+} */

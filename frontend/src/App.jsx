@@ -2,9 +2,9 @@ import "./App.css";
 import { createBrowserRouter, RouterProvider } from "react-router-dom";
 import Root from "./pages/Root";
 import HomePage from "./pages/HomePage";
-import BooksPage from "./pages/BooksPage";
+import ReleasesPage from "./pages/ReleasesPage";
 import ErrorPage from "./pages/ErrorPage";
-import BookDetailPage from "./pages/BookDetailPage";
+import ReleaseDetailPage from "./pages/ReleaseDetailPage";
 import { CartContextProvider } from "./store/CartContext";
 
 
@@ -20,12 +20,12 @@ function App() {
           element: <HomePage />
         }, 
         {
-          path: '/books',
-          element: <BooksPage />
+          path: '/releases',
+          element: <ReleasesPage />
         },
         {
-          path: '/books/:bookId',
-          element: <BookDetailPage />
+          path: '/releases/:releaseId',
+          element: <ReleaseDetailPage />
         },
 
       ]

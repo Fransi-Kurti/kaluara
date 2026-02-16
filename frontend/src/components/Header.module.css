@@ -2,9 +2,8 @@
     position: relative;
     height: 80px;
     width: 100%;
-    max-width: 1200px;
     display: flex;
-    justify-content: space-between;
+    justify-content: center;
     align-items: center;
     margin: 0 auto;
     padding: 0 20px; 
@@ -42,10 +41,14 @@
     align-items: center;
     justify-content: center;
     font-size: 10px;
-    color: white;
+    color: #232323;
     font-weight: bold;
+
 }
 
+.noIconCircle {
+    visibility: none;
+}
 
 @media (max-width: 768px) {
     .header {

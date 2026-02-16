@@ -1,0 +1,75 @@
+[
+  {
+    "id": "r1",
+    "image": "images/muhabeteBoshe.jpg",
+    "category": "art",
+    "title": "Muhabete Boshe",
+    "author": "Hostile Incoming",
+    "description": "An award-winning cultural history of how we experience ",
+    "price": 48.5
+  },
+  {
+    "id": "r2",
+    "image": "images/ikinVijne.jpg",
+    "category": "art",
+    "title": "Ikin Vijne",
+    "author": "I Tpame I Tvrame",
+    "description": "The foremost philosopher of art",
+    "price": 20
+  },
+  {
+    "id": "r3",
+    "image": "images/kaluaraVol1.jpg",
+    "category": "film",
+    "title": "Kaluara Volume 1",
+    "author": "VA",
+    "description": "An unique account of cinema’s most influential journal",
+    "price": 25
+  },
+  {
+    "id": "r4",
+    "image": "images/blediBorakuTha.jpg",
+    "category": "film",
+    "title": "Tha",
+    "author": "Bledi Boraku",
+    "description": "New and fully updated edition\n\nIn the last decade, Spanish film auteur ",
+    "price": 30
+  },
+  {
+    "id": "r5",
+    "image": "images/kaluaraVol2.jpg",
+    "category": "film",
+    "title": "Kaluara Volume 2",
+    "author": "VA",
+    "description": "Hitchcock gets onto the analyst’s couch in this extraordinary volume ",
+    "price": 30
+  },
+  {
+    "id": "r6",
+    "image": "images/bloodAndSeed.jpg",
+    "category": "film",
+    "title": "Blood and Seed",
+    "author": "Blood and Seed",
+    "description": "Bearded bomb-throwers, self-indulgent nihilists, dangerous sub",
+    "price": 25
+  },
+  {
+    "id": "r7",
+    "image": "images/kaluaraVol3.jpg",
+    "category": "film",
+    "title": "Kaluara Volume 3",
+    "author": "VA",
+    "description": "“An indispensable guide to the story so far.” —Times Literary Supplement\n\nStill the most comprehensive ",
+    "price": 25
+  },
+  {
+    "id": "r8",
+    "image": "images/iTpameITvrame.jpg",
+    "category": "film",
+    "title": "10 Year Anniversary",
+    "author": "I Tpame I Tvrame",
+    "description": "Paris, summer 1946: this moment marks an important ",
+    "price": 30
+  }
+]
+  

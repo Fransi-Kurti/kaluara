@@ -15,32 +15,32 @@ app.use((req, res, next) => {
 });
 
 // Load all books
-app.get("/api/books", async (req, res) => {
+app.get("/api/releases", async (req, res) => {
   try {
-    const books = await fs.readFile("./data/books.json", "utf8");
-    res.json(JSON.parse(books));
+    const releases = await fs.readFile("./data/releases.json", "utf8");
+    res.json(JSON.parse(releases));
   } catch (error) {
-    console.error("Error reading books file:", error);
+    console.error("Error reading release file:", error);
     res.status(500).json({ message: "Internal server error" });
   }
 });
 
 // Fetch a single book by ID
-app.get("/api/books/:bookId", async (req, res) => {
+app.get("/api/releases/:releaseId", async (req, res) => {
   try {
-    const books = await fs.readFile("./data/books.json", "utf8");
-    const booksArray = JSON.parse(books);
+    const releases = await fs.readFile("./data/releases.json", "utf8");
+    const releasesArray = JSON.parse(releases);
     
     // Find the book with the given ID
-    const book = booksArray.find(b => b.id === req.params.bookId);
+    const release = releasesArray.find(r => r.id === req.params.releaseId);
     
-    if (!book) {
-      return res.status(404).json({ message: "Book not found" });
+    if (!release) {
+      return res.status(404).json({ message: "Release not found" });
     }
     
-    res.json(book);
+    res.json(release);
   } catch (error) {
-    console.error("Error fetching book:", error);
+    console.error("Error fetching release:", error);
     res.status(500).json({ message: "Internal server error" });
   }
 });

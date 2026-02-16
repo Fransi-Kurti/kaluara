@@ -1,3 +1,27 @@
+// import { Link } from "react-router-dom";
+// import classes from "./ProductItem.module.css";
+
+// export default function ProductItem({ item, product }) {
+//   return (
+//     <li className={classes.productItem}>
+//       <Link to={`/${product}/${item.id}`} className={classes.productLink}>
+//         <img
+//           src={`http://localhost:3000/${item.image}`}
+//           alt={item.title}
+//           className={classes.productImage}
+//         />
+//         <div className={classes.productTitle}>
+//           <div>
+//             <p>{item.title}</p>
+//             <p>-{item.author}</p>
+//           </div>
+//           <p>ClICK FOR MORE</p>
+//         </div>
+        
+//       </Link>
+//     </li>
+//   );
+// }
 import { Link } from "react-router-dom";
 import classes from "./ProductItem.module.css";
 
@@ -5,19 +29,21 @@ export default function ProductItem({ item, product }) {
   return (
     <li className={classes.productItem}>
       <Link to={`/${product}/${item.id}`} className={classes.productLink}>
-        <img
-          src={`http://localhost:3000/${item.image}`}
-          alt={item.title}
-          className={classes.productImage}
-        />
-        <div className={classes.productTitle}>
-          <div>
-            <p>{item.title}</p>
-            <p>-{item.author}</p>
-          </div>
-          <p>ClICK FOR MORE</p>
+
+        <div className={classes.imageWrapper}>
+          <img
+            src={`http://localhost:3000/${item.image}`}
+            alt={item.title}
+            className={classes.productImage}
+          />
         </div>
-        
+
+        <div className={classes.productInfo}>
+          <p className={classes.productTitle}>{item.title}</p>
+          <p className={classes.productAuthor}>{item.author}</p>
+          <span className={classes.more}>Click for more</span>
+        </div>
+
       </Link>
     </li>
   );
