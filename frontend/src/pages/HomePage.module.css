@@ -1,12 +1,10 @@
 .mainHomePageContainer {
   display: flex;
-  justify-content: center;
   flex-direction: column;
   gap: 10px;
   width: 100%;
-  height: 100%;
-  /* max-width: 1200px; */
-  /* border: 3px solid green; */
+  height: auto;       /* allows it to grow with content */
+  min-height: 100vh; /* ensures it fills viewport at least */
   box-sizing: border-box;
   margin-bottom: 20px;
 }

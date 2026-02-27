@@ -1,0 +1,56 @@
+/* full width section */
+.section {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  padding: 20px;
+}
+
+/* centered container */
+.container {
+  width: 100%;
+  max-width: 1200px;
+}
+
+/* section title */
+.sectionTitle {
+  font-size: 1rem;
+  letter-spacing: 1px;
+  margin-bottom: 30px;
+}
+
+/* 5 column layout */
+.grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 10px;
+}
+
+/* clickable card */
+.card {
+  display: block;
+  text-decoration: none;
+}
+
+/* placeholder image */
+.placeholder {
+  width: 100%;
+  aspect-ratio: 1 / 1; /* perfect square */
+  background-color: gray;
+  transition: opacity 0.3s ease;
+}
+
+/* subtle hover */
+.card:hover .placeholder {
+  opacity: 0.7;
+}
+
+/* ---------------- */
+/* Responsive */
+/* ---------------- */
+
+
+
+
+/* allow the container to scale on small screens */
+

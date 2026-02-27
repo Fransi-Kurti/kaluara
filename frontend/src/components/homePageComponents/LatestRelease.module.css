@@ -1,0 +1,121 @@
+/* full width section */
+.latestReleaseSection {
+  width: 100%;
+  display: flex;
+  height: auto;
+  justify-content: center;
+  padding: 20px;
+}
+
+/* centered container with same width as carousel */
+.container {
+  width: 100%;
+  max-width: 1200px;
+}
+
+/* title */
+.sectionTitle {
+  font-size: 1rem;
+  letter-spacing: 1px;
+  margin-bottom: 30px;
+}
+
+/* equal columns */
+.content {
+  display: grid;
+  grid-template-columns: 1fr 1fr; /* equal width */
+  gap: 60px;
+
+  /* THIS makes both sides equal height */
+  align-items: stretch;
+}
+
+/* both columns same size */
+.left,
+.right {
+  width: 100%;
+  height: 100%;
+}
+
+/* image fills its container */
+.image {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+}
+
+/* right column layout */
+.right {
+  display: flex;
+  /* align-items: center; */
+}
+
+/* keeps text nicely centered vertically */
+.textInner {
+  max-width: 500px;
+}
+
+.title {
+  font-size: 1rem;
+  margin-bottom: 12px;
+}
+
+.description {
+  font-size: 13px;
+  line-height: 1.6;
+  margin-bottom: 15px;
+}
+
+.link {
+  font-size: 12px;
+  text-decoration: underline;
+  cursor: pointer;
+}
+
+@media (max-width: 768px) {
+  /* Stack content vertically */
+  .content {
+    display: flex;
+    flex-direction: column;
+    gap: 30px; /* reduce gap for smaller screens */
+  }
+
+  /* Right column layout adjustment */
+  .right {
+    display: block; /* no flex needed */
+  }
+
+  /* Ensure left and right take full width */
+  .left,
+  .right {
+    width: 100%;
+    height: auto; /* let content define height */
+  }
+
+  /* Image takes full width and maintains aspect ratio */
+  .image {
+    height: auto;
+  }
+
+  /* Center text nicely */
+  .textInner {
+    max-width: 100%;
+    padding: 0 10px; /* optional padding for small screens */
+  }
+
+  /* Optional: adjust font sizes for mobile */
+  .sectionTitle,
+  .title {
+    font-size: 1.2rem;
+  }
+
+  .description {
+    font-size: 14px;
+  }
+
+  .link {
+    font-size: 13px;
+  }
+}
+
